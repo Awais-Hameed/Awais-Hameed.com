@@ -558,7 +558,7 @@
    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" 
         alt="WhatsApp" />
 </a>
-<a href="tel:+923051115093" class="cta-button" aria-label="Call">
+<a href="tel:+923051115093" class="cta-button" onclick="vibrateButton(this)" aria-label="Call">
   <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
     <path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.36 11.36 0 003.58.57 1 1 0 011 1v3.61a1 1 0 01-1 1A17.91 17.91 0 013 5a1 1 0 011-1h3.6a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.05l-2.31 2.16z"/>
   </svg>
@@ -592,7 +592,30 @@
     height: 24px;
     fill: white;
   }
+
+  @keyframes vibrate {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+  }
+
+  .vibrating {
+    animation: vibrate 0.3s linear;
+  }
 </style>
+
+<script>
+  function vibrateButton(element) {
+    element.classList.add('vibrating');
+    setTimeout(() => {
+      element.classList.remove('vibrating');
+    }, 300);
+  }
+</script>
+
 
 
 
