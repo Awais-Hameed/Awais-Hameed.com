@@ -557,7 +557,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Awais Hameed | Portfolio</title>
 
-  <!-- 🔹 No style interference with your site -->
   <style>
     * {
       margin: 0;
@@ -583,9 +582,10 @@
       z-index: 9999;
     }
 
-    .intro-overlay img {
-      width: 150px;
-      height: 150px;
+    .intro-overlay .seo-text {
+      font-size: 60px;
+      font-weight: bold;
+      color: #00ff00;
       animation: rotate 3s linear infinite, glow 1s ease-in-out infinite alternate;
     }
 
@@ -595,8 +595,8 @@
     }
 
     @keyframes glow {
-      0% { filter: drop-shadow(0 0 5px #00ff00); }
-      100% { filter: drop-shadow(0 0 20px #00ff00); }
+      0% { text-shadow: 0 0 5px #00ff00; }
+      100% { text-shadow: 0 0 20px #00ff00; }
     }
 
     /* 🔹 Main Content (Hidden Only Initially) */
@@ -607,9 +607,9 @@
 </head>
 <body>
 
-  <!-- 🔹 SEO Logo Intro Screen -->
+  <!-- 🔹 SEO Text Intro Screen -->
   <div class="intro-overlay">
-    <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="SEO Logo" />
+    <div class="seo-text">SEO</div>
   </div>
 
   <!-- 🔹 Main Website Content -->
@@ -630,6 +630,7 @@
 
 </body>
 </html>
+
 
 
 	<!-- WhatsApp Floating Button -->
