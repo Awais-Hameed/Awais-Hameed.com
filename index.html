@@ -550,7 +550,99 @@
   <script src="js/main.js"></script>
     
   </body>
-<!-- WhatsApp Floating Button -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awais Hameed | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      overflow: hidden;
+    }
+
+    /* Intro Screen */
+    .intro {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .intro img {
+      width: 150px;
+      height: 150px;
+      animation: rotate 3s linear infinite, glow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes glow {
+      0% { filter: drop-shadow(0 0 5px #00ff00); }
+      100% { filter: drop-shadow(0 0 20px #00ff00); }
+    }
+
+    /* Main Content (Hidden initially) */
+    .main {
+      display: none;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .main h1 {
+      color: #007bff;
+    }
+
+    .main p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Logo -->
+  <div class="intro">
+    <!-- Use your SEO logo image below -->
+    <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="SEO Logo" />
+  </div>
+
+  <!-- Main Portfolio Content -->
+  <div class="main">
+    <h1>Awais Hameed</h1>
+    <p>Welcome to my digital marketing portfolio!</p>
+  </div>
+
+  <!-- JS to hide logo after 3 seconds -->
+  <script>
+    setTimeout(() => {
+      document.querySelector('.intro').style.display = 'none';
+      document.querySelector('.main').style.display = 'block';
+      document.body.style.overflow = 'auto';
+    }, 3000); // 3 seconds
+  </script>
+
+</body>
+</html>
+
+	<!-- WhatsApp Floating Button -->
 <a href="https://wa.me/447852555119" 
    class="whatsapp-float" 
    target="_blank" 
