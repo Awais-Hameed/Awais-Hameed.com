@@ -550,6 +550,103 @@
   <script src="js/main.js"></script>
     
   </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awais Hameed | Digital Marketer</title>
+  
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f9f9f9;
+    }
+    header {
+      background: linear-gradient(to right, #007bff, #00c6ff);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .scroll-down {
+      font-size: 2rem;
+      color: white;
+      animation: bounce 2s infinite;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 40px;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(15px); }
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .service {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 data-aos="fade-down">Awais Hameed</h1>
+    <p data-aos="fade-up">GMB | SEO | Digital Marketing Expert</p>
+    <a href="#services" class="scroll-down">↓</a>
+  </header>
+
+  <section id="services">
+    <h2 data-aos="fade-up">My Services</h2>
+
+    <div class="service" data-aos="fade-right">
+      <h3>GMB Optimization</h3>
+      <p>Boost your Google Maps presence with expert local SEO.</p>
+    </div>
+
+    <div class="service" data-aos="fade-left">
+      <h3>Website Development</h3>
+      <p>Responsive, fast-loading, SEO-friendly websites built professionally.</p>
+    </div>
+
+    <div class="service" data-aos="zoom-in">
+      <h3>Google Ads & Social Media Marketing</h3>
+      <p>Run targeted campaigns that bring real leads and conversions.</p>
+    </div>
+  </section>
+
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>
+	
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/447852555119" 
    class="whatsapp-float" 
