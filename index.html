@@ -557,6 +557,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Awais Hameed | Portfolio</title>
 
+  <!-- 🔹 No style interference with your site -->
   <style>
     * {
       margin: 0;
@@ -566,12 +567,11 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
-    /* Intro Screen */
-    .intro {
+    /* 🔹 Intro Screen Overlay */
+    .intro-overlay {
       position: fixed;
       top: 0; left: 0;
       width: 100vw;
@@ -583,7 +583,7 @@
       z-index: 9999;
     }
 
-    .intro img {
+    .intro-overlay img {
       width: 150px;
       height: 150px;
       animation: rotate 3s linear infinite, glow 1s ease-in-out infinite alternate;
@@ -599,48 +599,38 @@
       100% { filter: drop-shadow(0 0 20px #00ff00); }
     }
 
-    /* Main Content (Hidden initially) */
-    .main {
-      display: none;
-      padding: 40px;
-      text-align: center;
-    }
-
-    .main h1 {
-      color: #007bff;
-    }
-
-    .main p {
-      font-size: 18px;
-      margin-top: 10px;
+    /* 🔹 Main Content (Hidden Only Initially) */
+    .main-content {
+      visibility: hidden;
     }
   </style>
 </head>
 <body>
 
-  <!-- Intro Logo -->
-  <div class="intro">
-    <!-- Use your SEO logo image below -->
+  <!-- 🔹 SEO Logo Intro Screen -->
+  <div class="intro-overlay">
     <img src="https://cdn-icons-png.flaticon.com/512/742/742751.png" alt="SEO Logo" />
   </div>
 
-  <!-- Main Portfolio Content -->
-  <div class="main">
-    <h1>Awais Hameed</h1>
-    <p>Welcome to my digital marketing portfolio!</p>
+  <!-- 🔹 Main Website Content -->
+  <div class="main-content">
+    <!-- ✨ Yahan apna purana full portfolio HTML code paste karo -->
+    <h1 style="text-align: center; color: #007bff;">Awais Hameed</h1>
+    <p style="text-align: center;">Welcome to my digital marketing portfolio!</p>
+    <!-- ✅ Paste full site HTML here -->
   </div>
 
-  <!-- JS to hide logo after 3 seconds -->
+  <!-- 🔹 JavaScript to Remove Intro After 3s -->
   <script>
     setTimeout(() => {
-      document.querySelector('.intro').style.display = 'none';
-      document.querySelector('.main').style.display = 'block';
-      document.body.style.overflow = 'auto';
-    }, 3000); // 3 seconds
+      document.querySelector('.intro-overlay').style.display = 'none';
+      document.querySelector('.main-content').style.visibility = 'visible';
+    }, 3000);
   </script>
 
 </body>
 </html>
+
 
 	<!-- WhatsApp Floating Button -->
 <a href="https://wa.me/447852555119" 
