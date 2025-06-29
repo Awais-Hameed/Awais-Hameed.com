@@ -671,34 +671,46 @@
 
   <!-- === Parallax Google‑logo effect (CSS) === -->
   <style>
-    /* پورے صفحے کے پیچھے لوگو رکھنے والا کنٹینر */
     .parallax-logo {
-      position: fixed;          /* ہمیشہ پیچھے چپکا رہے */
-      inset: 0;                 /* top/right/bottom/left = 0 */
-      z-index: -1;              /* تمام مواد کے پیچھے */
-      pointer-events: none;     /* کلک نہ ہو */
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
       overflow: hidden;
     }
 
-    /* خود لوگو کی ڈِم اور پوزیشن */
     .parallax-logo img {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 500px;             /* چاہیں تو بدل لیں */
-      opacity: 0.21;            /* ہلکا سا واٹرمارک سینس */
+      width: 500px; /* Default (PC) */
+      opacity: 0.15;
       transform: translate(-50%, -50%);
       transition: transform 0.12s ease-out;
       will-change: transform;
+    }
+
+    /* === Responsive logo size for mobile === */
+    @media (max-width: 768px) {
+      .parallax-logo img {
+        width: 250px; /* smaller size for mobile */
+        opacity: 0.12; /* optional: slightly lower opacity on small screens */
+      }
+    }
+
+    @media (min-width: 769px) {
+      .parallax-logo img {
+        width: 500px; /* default desktop size */
+        opacity: 0.15;
+      }
     }
   </style>
 </head>
 
 <body>
-  <!-- === آپ کا موجودہ پورٹ فولیو مواد یہاں ہے === -->
-  <!-- …………………………………………………………… -->
+  <!-- === Your Portfolio Content Here === -->
 
-  <!-- === Google logo background (HTML) === -->
+  <!-- === Google logo background === -->
   <div class="parallax-logo">
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
@@ -706,18 +718,18 @@
     />
   </div>
 
-  <!-- === Scroll‑based 3D حرکت (JavaScript) === -->
+  <!-- === Scroll‑based 3D effect === -->
   <script>
     window.addEventListener("scroll", () => {
-      const y = window.scrollY;                    // کتنی اسکرولنگ ہوئی
+      const y = window.scrollY;
       const logo = document.querySelector(".parallax-logo img");
-      // X اور Y دونوں پر ہلکی سی روٹیشن (0.1 = اسکرول سنسِٹِوِٹی)
       logo.style.transform =
         `translate(-50%, -50%) rotateX(${y * 0.1}deg) rotateY(${y * 0.1}deg)`;
     });
   </script>
 </body>
 </html>
+
 
 
 	<!-- WhatsApp Floating Button -->
