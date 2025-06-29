@@ -730,6 +730,55 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fish Animation</title>
+  <style>
+    #fish {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      animation: swim 2s ease-in-out;
+      z-index: 9999;
+    }
+
+    @keyframes swim {
+      0% { transform: translateX(-50%) translateY(100px); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateX(-50%) translateY(0); opacity: 0; }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button or any element -->
+  <button onclick="showFish()">Tire Goma Click Karo</button>
+
+  <!-- Fish image -->
+  <img id="fish" src="https://i.imgur.com/IR1SmhV.png" alt="Fish">
+
+  <script>
+    function showFish() {
+      const fish = document.getElementById('fish');
+      fish.style.display = 'block';
+      setTimeout(() => {
+        fish.style.display = 'none';
+      }, 2000); // Fish disappears after 2 seconds
+    }
+  </script>
+
+</body>
+</html>
 
 
 	<!-- WhatsApp Floating Button -->
