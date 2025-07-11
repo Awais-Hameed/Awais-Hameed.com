@@ -1,62 +1,821 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Awais Hameed Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Awais Hameed</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/aifaceswap-a9f09e60cbb9ed7f9a755546780fb526-fotor-bg-remover-20250401142248.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Awais Hameed</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Local SEO Specialist  ',
+						'website design  ',
+						'Google my Business Specialist   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Digital marketer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/awais-hameed093/" class="btn btn-primary py-3 px-4">linkedin.</a> 
+							<!-- <a href="https://github.com/rishabhnmishra" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p> -->
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Awais Hameed</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Digital Markting</span></p>
+										<p><span class="title-s">Experience: </span> <span>4 Years 3 Months</span></p>
+										<p><span class="title-s">Address: </span> <span>johar town lahore</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>digital marketing</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Local SEO</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>ppc ADS</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>website designing</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>GBP</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With over 4 years and 3 months of experience in digital marketing, I specialize in SEO, PPC, content marketing, and social media strategy. I create data-driven campaigns that boost brand visibility and drive customer engagement. My expertise in analytics ensures strategies are optimized for maximum ROI. Passionate about staying ahead of industry trends, I deliver impactful results for businesses across diverse sectors..</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<!-- <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Retail, Ecommerce, BFSI &amp; Digital Marketing</span></li> -->
+									<li class="d-flex"><span>Education:</span> <span>BS computer science</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Urdu</span></li>
+									<li class="d-flex"><span>Tools:</span> <span>Google Analytics, Ahrefs, SEMrush &amp; Google Search Console</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, PySpark, Excel, Git, JIRA, Google Analytics &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Teaching</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="32">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/awais-hameed093/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>"I’m a Digital Marketing Expert with over 4 years of experience, specializing in data-driven strategies that drive online growth. With a strong focus on trends and digital tools, I’ve consistently delivered impactful results for businesses.".</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2021-Present</span>
+						<h2>Digital Markting</h2>
+						<span class="position">Expert</span>
+						<p class="mt-4">Aspire Digital Boost
+							<ul>
+								<li>Successfully managed and executed digital marketing campaigns for Aspire Digital Boost, increasing brand visibility and customer engagement.</li>
+								<li>Contributed to the growth of Kar Digital Marketing by implementing targeted strategies that boosted online presence and lead generation.</li>
+								<li>Developed and implemented data-driven marketing strategies for Aspire Digital Boost, leading to measurable improvements in ROI and customer acquisition.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2018-2021</span>
+						<h2>Digital Markting</h2>
+						<span class="position">Expert</span>
+						<p class="mt-4">roku (Digital markting company)
+							<ul>
+								<li>Optimized Google My Business listings to improve local search visibility and increase foot traffic for clients.</li>
+								<li>Consistently updated business information, hours, and photos to enhance online presence and engage with customers</li>
+								<li>Monitored customer reviews and feedback, ensuring prompt responses and fostering a positive online reputation.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2014-2018</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">Visvesvaraya Technological University</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2012-2013</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Govt High School</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+
+    	</div>
+    </section>
+
+   
+       
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+	
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+			
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="87">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="92%">0</strong>
+                <span>successful</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems and uncover hidden data stories </h4>
+						<br>
+						<p><=coming soon</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Lahore, Pakistan</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-whatsapp"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://03051115093">+923051115093</a></p>
+	          </div>
+          </div>	
+           
+		<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="awaislinkbuilder72@gmail.com">awaislinkbuilder72@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">Comeing sooon</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/awais-link-builder-972495341/"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://x.com/awaisHameed093"><span class="icon-X"></span></a></li> -->
+					  <li class="ftco-animate"><a href= https://www.facebook.com/profile.php?id=61564652276878><span class="icon-facebook"></span></a></li>
+				      <!-- <li class="ftco-animate"><a href="https://www.instagram.com/rishabhnmishra/"><span class="icon-instagram"></span></a></li> -->
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awais Hameed | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* 🔹 Intro Screen Overlay */
+    .intro-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .intro-overlay .seo-text {
+      font-size: 60px;
+      font-weight: bold;
+      color: #00ff00;
+      animation: rotate 3s linear infinite, glow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px #00ff00; }
+      100% { text-shadow: 0 0 20px #00ff00; }
+    }
+
+    /* 🔹 Main Content (Hidden Only Initially) */
+    .main-content {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔹 SEO Text Intro Screen -->
+  <div class="intro-overlay">
+    <div class="seo-text">SEO</div>
+  </div>
+
+  <!-- 🔹 Main Website Content -->
+  <div class="main-content">
+    <!-- ✨ Yahan apna purana full portfolio HTML code paste karo -->
+    <h1 style="text-align: center; color: #007bff;">Awais Hameed</h1>
+    <p style="text-align: center;">Welcome to my digital marketing portfolio!</p>
+    <!-- ✅ Paste full site HTML here -->
+  </div>
+
+  <!-- 🔹 JavaScript to Remove Intro After 3s -->
+  <script>
+    setTimeout(() => {
+      document.querySelector('.intro-overlay').style.display = 'none';
+      document.querySelector('.main-content').style.visibility = 'visible';
+    }, 3000);
+  </script>
+
+</body>
+</html>
+
+<section id="skills-icons" style="text-align: center; padding: 40px;">
+  <h2 style="margin-bottom: 20px;">My Digital Skills</h2>
+  
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; font-size: 50px; color: #2c3e50;">
+    <div title="Google Ads">
+      <i class="fab fa-google"></i>
+      <p style="font-size: 16px;">Google Ads</p>
+    </div>
+    
+    <div title="SEO Expert">
+      <i class="fas fa-search"></i>
+      <p style="font-size: 16px;">SEO</p>
+    </div>
+    
+    <div title="Shopify Store">
+      <i class="fab fa-shopify"></i>
+      <p style="font-size: 16px;">Shopify</p>
+    </div>
+    
+    <div title="Google My Business">
+      <i class="fas fa-map-marker-alt"></i>
+      <p style="font-size: 16px;">GMB</p>
+    </div>
+    
+    <div title="WordPress Development">
+      <i class="fab fa-wordpress"></i>
+      <p style="font-size: 16px;">WordPress</p>
+    </div>
+  </div>
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services | Awais Team Media</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Awais Portfolio – Parallax Logo</title>
+
+  <!-- === Parallax Google‑logo effect (CSS) === -->
+  <style>
+    .parallax-logo {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .parallax-logo img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 500px; /* Default (PC) */
+      opacity: 1.15;
+      transform: translate(-50%, -50%);
+      transition: transform 0.12s ease-out;
+      will-change: transform;
+    }
+
+    /* === Responsive logo size for mobile === */
+    @media (max-width: 768px) {
+      .parallax-logo img {
+        width: 250px; /* smaller size for mobile */
+        opacity: 1.12; /* optional: slightly lower opacity on small screens */
+      }
+    }
+
+    @media (min-width: 769px) {
+      .parallax-logo img {
+        width: 500px; /* default desktop size */
+        opacity: 1.15;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo"><img src="images/logo.png" alt="Logo" /></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Our Services</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- === Your Portfolio Content Here === -->
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Our Services</h1>
-      <p>Results-driven marketing solutions tailored to your business.</p>
-    </div>
-  </section>
+  <!-- === Google logo background === -->
+  <div class="parallax-logo">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+      alt="Google Logo"
+    />
+  </div>
 
-  <section class="services-overview">
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Local SEO (Google My Business)</h3>
-        <p>Rank higher in local searches, get more calls, and attract nearby customers.</p>
-      </div>
-      <div class="service-card">
-        <h3>Google Ads Management</h3>
-        <p>Laser-targeted ads that bring immediate traffic and conversions.</p>
-      </div>
-      <div class="service-card">
-        <h3>Social Media Management</h3>
-        <p>Grow your audience on Facebook, Instagram, and more with daily content & strategy.</p>
-      </div>
-      <div class="service-card">
-        <h3>Website Development</h3>
-        <p>Fast, responsive, and conversion-optimized websites built to perform.</p>
-      </div>
-      <div class="service-card">
-        <h3>Complete Digital Marketing</h3>
-        <p>From strategy to execution — one team to handle your online growth.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Awais Team Media. All rights reserved.</p>
-      <a href="https://wa.me/yourwhatsapplink" class="whatsapp-btn">Chat on WhatsApp</a>
-    </div>
-  </footer>
+  <!-- === Scroll‑based 3D effect === -->
+  <script>
+    window.addEventListener("scroll", () => {
+      const y = window.scrollY;
+      const logo = document.querySelector(".parallax-logo img");
+      logo.style.transform =
+        `translate(-50%, -50%) rotateX(${y * 0.1}deg) rotateY(${y * 0.1}deg)`;
+    });
+  </script>
 </body>
 </html>
+
+
+
+
+	<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/447852555119" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Chat with us on WhatsApp">
+   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" 
+        alt="WhatsApp" />
+</a>
+<a href="tel:+923051115093" class="cta-button" id="callBtn" aria-label="Call">
+  <svg class="phone-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
+    <path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.36 11.36 0 003.58.57 1 1 0 011 1v3.61a1 1 0 01-1 1A17.91 17.91 0 013 5a1 1 0 011-1h3.6a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.05l-2.31 2.16z"/>
+  </svg>
+</a>
+
+<style>
+  .cta-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #000000;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+  }
+
+  .cta-button:hover {
+    background-color: #333333;
+  }
+
+  .phone-icon {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+
+  /* Glow effect */
+  .glow {
+    box-shadow: 0 0 15px 5px #00ffcc, 0 0 10px 4px #00ffcc;
+  }
+</style>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const btn = document.getElementById('callBtn');
+    btn.classList.add('glow');
+
+    // Remove glow after 2 seconds
+    clearTimeout(btn.glowTimeout);
+    btn.glowTimeout = setTimeout(() => {
+      btn.classList.remove('glow');
+    }, 2000);
+  });
+</script>
+
+
+
+
+
+
+
+<style>
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #25D366;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.whatsapp-float img {
+    width: 40px;
+    height: 40px;
+}
+</style
+</html>
+
